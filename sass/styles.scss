@@ -6,19 +6,66 @@ $line-height-base: 1.50;
 $navbar-default-link-color: black;
 $link-color: purple;
 
+// $screen-lg: 1400;
+
 @import "bootstrap-compass";
 @import "bootstrap-variables";
 @import "bootstrap";
 
 $hairline-color: #ccc;
 $breathing-room: 20px;
+$breakpoint: $screen-sm-min;
+@mixin make-breakpoint-column($columns) {
+	@include make-sm-column($columns);	
+}
 
-//When the grid stops being a grid
-$break-point: $screen-sm-min;
+//If an element is supposed to trade placed with another element depending on if there is or isn't a grid
+//use this
+@mixin breakpoint-swap($visibleWithGrid, $visibleWithoutGrid) {
+	@media (min-width: $breakpoint) {
+		#{($visibleWithGrid)} {
+			display: block;
+		}
+		#{($visibleWithoutGrid)} {
+			display: none;
+		}	
+	}
 
-.logo {
+	@media (max-width: $breakpoint) {
+		#{($visibleWithGrid)} {
+			display: none;
+		}	
+		#{($visibleWithoutGrid)} {
+			display: block;
+		}	
+	}
+}
+
+//create a hairline border between two adjacent elements. 
+@mixin hairline-border($left, $right) {
+	#{$left} {
+		padding-right: $breathing-room;
+
+		border-right-width: 1px;
+		border-right-style: solid;
+		border-right-color: $hairline-color;	
+	}
+
+	#{$right} {
+		//Move the margin one over so the borders will overlap
+		margin-left: -1px;
+
+		padding-left: $breathing-room;
+		border-left-width: 1px;
+		border-left-style: solid;
+		border-left-color: $hairline-color;	
+	}	
+}
+
+#header {
 	.logo-main {
-		
+		@include make-sm-column(5);
+
 		font-size: 200%;
 		font-weight: bolder;
 
@@ -42,93 +89,57 @@ $break-point: $screen-sm-min;
 			letter-spacing: 2px;
 		}
 	}
-}
 
-#header > .container > .row {
-	
-}
-
-.menu-container {
-	text-align: center;
-	ul.menu {
-		display: inline-block;
-		li {
-			a {
-				// color: black;
+	.menu-container {
+		@include make-sm-column(7);
+		text-align: center;
+		ul.menu {
+			display: inline-block;
+			li {
+				//On phone screens, make sure that the menu item stretchs across the entire screen.
+				//This keeps them from bunching up on one line in an unsightly manner.
+				@media(max-width: $screen-xs-min) {
+					width: 100%;
+				}
 			}
-			a:not(.active) {
-				// text-decoration: underline;
-			}
-		}
-
-		@media(min-width: $break-point) {
-			padding-top: 05%;
 		}
 	}
 }
-
-
 
 #main-content {
 	height: 100%;
 	padding-top: 15px;
 
-	@media(min-width: $break-point) {
-		margin-top: 5px;	
-		padding-top: 15px;
-	}
-
 	border-top: 1px;
 	border-top-style: solid;
 	border-top-color: $hairline-color;
 
-	.row {
-		height: 100%;
+	#content-wrapper {
+		@include make-row();
 	}
-	
-	//Add a border to the right side of the left content area and the left side 
-	//of the right content area. This will put a line down the middle between them. 
+
 	#main-content-left {
-		@media(min-width: $break-point) {
-			padding-right: $breathing-room;
-
-			border-right-width: 1px;
-			border-right-style: solid;
-			border-right-color: $hairline-color;	
-		}
+		@include make-breakpoint-column(4);
 	}
 
-	#main-content-right {
-		@media(min-width: $break-point) {
-			//Move the margin one over so the borders will overlap
-			margin-left: -1px;
+	@include breakpoint-swap(#slideshow-social, #main-content-social);
 
-			padding-left: $breathing-room;
-			border-left-width: 1px;
-			border-left-style: solid;
-			border-left-color: $hairline-color;	
-		}
-
-		@media(max-width: $break-point) {
-			margin-top: $breathing-room;
-		}
+	@media (min-width: $screen-sm-min) {
+		@include hairline-border(#slideshow, #main-content-left);
 	}
 
-	//ensure that the image is never taller or wider than its container
-	#main-content-image {
+	#slideshow {
+		@include make-breakpoint-column(8);
+
 		img {
 			max-width: 100%;
 			max-height: 100%;
+			width: 100%;
 		}
 	}
 
-	#main-content-social-wrapper {
+	.social {
 		text-align: center;
 		margin-top: $breathing-room;
-		#main-content-social {
-			display: inline-block;
-			text-align: left;
-			// text-align: center;
-		}
 	}
 }
