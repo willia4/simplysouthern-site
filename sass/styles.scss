@@ -8,9 +8,9 @@ $link-color: purple;
 
 $button-background-color: #f2f2f2;
 
-$grid-columns: 13;
+$grid-columns: 11;
 $button-offset: 1;
-$button-columns: 6; 
+$button-columns: 5; 
 
 // $screen-lg: 1400;
 
@@ -72,8 +72,7 @@ $breakpoint: $screen-sm-min;
 }
 
 #header {
-	.logo-main {
-		@include make-sm-column(5);
+		width: 100%;
 
 		font-size: 200%;
 		font-weight: bolder;
@@ -97,27 +96,11 @@ $breakpoint: $screen-sm-min;
 			text-transform: uppercase;
 			letter-spacing: 2px;
 		}
-	}
-
-	.menu-container {
-		@include make-sm-column(7);
-		text-align: center;
-		ul.menu {
-			display: inline-block;
-			li {
-				//On phone screens, make sure that the menu item stretchs across the entire screen.
-				//This keeps them from bunching up on one line in an unsightly manner.
-				@media(max-width: $screen-xs-min) {
-					width: 100%;
-				}
-			}
-		}
-	}
 }
 
 #main-content {
-	#content-wrapper {
-		@include make-row();
+	.content-row {
+		// @include make-row();
 	}	
 
 	a.button {
@@ -139,6 +122,7 @@ $breakpoint: $screen-sm-min;
 		padding: $breathing-room;
 		border-radius: 25px;
 
+		margin-top: $breathing-room;
 
 		img.button-image {
 			border-radius: 15px;
@@ -161,6 +145,10 @@ $breakpoint: $screen-sm-min;
 	}
 
 	
+}
+
+body {
+	padding-bottom: $breathing-room;
 }
 
 // #main-content {

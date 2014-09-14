@@ -1,14 +1,24 @@
 <?php include("includes/_header.html") ?>
 <div id="main-content" class="container">
-	<div id="content-wraper">
-		<a id="button-location" class="button first" href="http://google.com">
+	<div class="content-row row">
+		<a id="button-location" class="button first" href="https://www.google.com/maps/place/2525+S+Cashua+Dr,+Florence,+SC+29501/@34.1671708,-79.8262163,17z/data=!4m2!3m1!1s0x885561568d6557d5:0x12eb25254d8699ab">
 			<img class="button-image" src="<? echo BuildMapImageSrc(); ?>" />
-			<div class="button-caption">2525 S. Cashua Dr.<br/>Florence, SC</div>
+			<div class="button-caption">2525 S. Cashua Dr.</div>
 		</a>
 
-		<a id="button-menu" class="button" href="http://google.com">
+		<a id="button-menu" class="button" href="#">
 			<img class="button-image" src="images/burger_1.jpg"/>
-			<div class="button-caption">Menu<br/>&nbsp;</div>
+			<div class="button-caption">Menu</div>
+		</a>
+	</div>
+	<div class="content-row row">
+		<a id="button-hours" class="button first" href="#">
+			<img class="button-image" src="images/hours.png" alt="Monday - Saturday, 6:00am - 2:00pm"/>
+			<div class="button-caption">Hours</div>
+		</a>
+		<a id="button-contact" class="button" href="tel:1-843-799-5253">
+			<img class="button-image" src="images/contact.png" alt="1-843-799-5253"/>
+			<div class="button-caption">Call us</div>
 		</a>
 	</div>
 </div>
@@ -24,8 +34,8 @@ function BuildMapImageSrc() {
 			, "zoom" => "17"
 			, "scale" => "2"
 			, "maptype" => "roadmap"
-			, "size" => "600x300" //scale: 2 means this will actually be 1200x600. 6:3 aspect ratio
-			// , "markers" => "color:white|2525 S. Cashua Dr. Florence, SC"
+			, "size" => "600x300" //scale: 2 means this will actually be 1200x600. 2:1 aspect ratio
+			, "markers" => "color:white|2525 S. Cashua Dr. Florence, SC"
 		);
 
 	$url = "http://maps.googleapis.com/maps/api/staticmap?";
