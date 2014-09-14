@@ -1,52 +1,40 @@
 <?php include("includes/_header.html") ?>
 <div id="main-content" class="container">
-	<div id="content-wrapper">
-		<div id="slideshow">
-			<div id="slideshow-carousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-wrap="true">
-				<ol class="carousel-indicators">
-					<li data-target="#slideshow-carousel" data-slide-to="0" class="active"></li>
-					<li data-target="#slideshow-carousel" data-slide-to="1"></li>
-				</ol>
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner">
-					<div class="item active">
-						<img src="images/burger_1.jpg" alt="">
-						<div class="carousel-caption">Burger</div>
-					</div>
-					<div class="item">
-						<img src="images/burger_2.jpg" alt="">
-						<div class="carousel-caption">Burger</div>
-					</div>
-				</div>
-			</div>
-			<? social("slideshow-social"); ?>
-		</div>
-	
-		<div id="main-content-left" >
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	<div id="content-wraper">
+		<a id="button-location" class="button first" href="http://google.com">
+			<img class="button-image" src="<? echo BuildMapImageSrc(); ?>" />
+			<div class="button-caption">2525 S. Cashua Dr.<br/>Florence, SC</div>
+		</a>
 
-			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-			<? social("main-content-social"); ?>
-		</div>
-		
+		<a id="button-menu" class="button" href="http://google.com">
+			<img class="button-image" src="images/burger_1.jpg"/>
+			<div class="button-caption">Menu<br/>&nbsp;</div>
+		</a>
 	</div>
 </div>
 <?php include("includes/_footer.html") ?>
 
 <?php 
-	function social($id) {
-		?>
-			<div id="<? echo $id;?>" class="social">
-				<p><a href="https://www.facebook.com/SimplySouthernDining"><i class="fa fa-facebook-square"></i> Like Us On Facebook</a></p>
-				<p><a href="http://yelp.com"><i class="icon-yelp"></i> Find us on Yelp</a></p>
-			</div>
-		<?
-	}
+function BuildMapImageSrc() {
+	$apiKey = "AIzaSyD32qe9eejR3tL2FBof88c1flTASulWZsU";
+
+	$params = array(
+			  "key" => $apiKey
+			, "center" => "2525 S. Cashua Dr. Florence, SC"
+			, "zoom" => "17"
+			, "scale" => "2"
+			, "maptype" => "roadmap"
+			, "size" => "600x300" //scale: 2 means this will actually be 1200x600. 6:3 aspect ratio
+			// , "markers" => "color:white|2525 S. Cashua Dr. Florence, SC"
+		);
+
+	$url = "http://maps.googleapis.com/maps/api/staticmap?";
+	
+
+	return $url . http_build_query($params);  
+
+	return "http://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+&markers=color:red%7Clabel:C%7C40.718217,-73.998284";
+} 
 ?>

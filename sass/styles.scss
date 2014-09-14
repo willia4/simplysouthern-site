@@ -6,6 +6,12 @@ $line-height-base: 1.50;
 $navbar-default-link-color: black;
 $link-color: purple;
 
+$button-background-color: #f2f2f2;
+
+$grid-columns: 13;
+$button-offset: 1;
+$button-columns: 6; 
+
 // $screen-lg: 1400;
 
 @import "bootstrap-compass";
@@ -17,6 +23,9 @@ $breathing-room: 20px;
 $breakpoint: $screen-sm-min;
 @mixin make-breakpoint-column($columns) {
 	@include make-sm-column($columns);	
+}
+@mixin make-breakpoint-offset($columns) {
+	@include make-sm-column-offset($columns);
 }
 
 //If an element is supposed to trade placed with another element depending on if there is or isn't a grid
@@ -107,39 +116,87 @@ $breakpoint: $screen-sm-min;
 }
 
 #main-content {
-	height: 100%;
-	padding-top: 15px;
-
-	border-top: 1px;
-	border-top-style: solid;
-	border-top-color: $hairline-color;
-
 	#content-wrapper {
 		@include make-row();
-	}
+	}	
 
-	#main-content-left {
-		@include make-breakpoint-column(4);
-	}
+	a.button {
+		background-color: $button-background-color;
 
-	@include breakpoint-swap(#slideshow-social, #main-content-social);
+		display: block;
+		color: black;
 
-	@media (min-width: $screen-sm-min) {
-		@include hairline-border(#slideshow, #main-content-left);
-	}
-
-	#slideshow {
-		@include make-breakpoint-column(8);
-
-		img {
-			max-width: 100%;
-			max-height: 100%;
-			width: 100%;
+		&:hover {
+			text-decoration: none;
+			background-color: darken($button-background-color, 10%);
 		}
 	}
 
-	.social {
+	.button {
+		@include make-breakpoint-column($button-columns);
+
 		text-align: center;
-		margin-top: $breathing-room;
+		padding: $breathing-room;
+		border-radius: 25px;
+
+
+		img.button-image {
+			border-radius: 15px;
+			max-width: 100%;
+		}
 	}
+
+	.button:not(.first) {
+		@include make-breakpoint-offset($button-offset);
+	}
+	
+	.button-caption {
+		text-decoration: inherit;;
+
+		padding: $breathing-room;
+		font-size: 150%;
+		font-weight: bold;
+		// font-variant: small-caps;
+		// text-transform: lowercase;;
+	}
+
+	
 }
+
+// #main-content {
+// 	height: 100%;
+// 	padding-top: 15px;
+
+// 	border-top: 1px;
+// 	border-top-style: solid;
+// 	border-top-color: $hairline-color;
+
+// 	#content-wrapper {
+// 		@include make-row();
+// 	}
+
+// 	#main-content-left {
+// 		@include make-breakpoint-column(4);
+// 	}
+
+// 	@include breakpoint-swap(#slideshow-social, #main-content-social);
+
+// 	@media (min-width: $screen-sm-min) {
+// 		@include hairline-border(#slideshow, #main-content-left);
+// 	}
+
+// 	#slideshow {
+// 		@include make-breakpoint-column(8);
+
+// 		img {
+// 			max-width: 100%;
+// 			max-height: 100%;
+// 			width: 100%;
+// 		}
+// 	}
+
+// 	.social {
+// 		text-align: center;
+// 		margin-top: $breathing-room;
+// 	}
+// }
