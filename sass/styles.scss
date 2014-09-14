@@ -3,7 +3,7 @@
 $font-family-sans-serif: Helvetica, Arial, sans-serif;
 $font-family-base: $font-family-sans-serif;
 $font-size-base: 15px;
-$line-height-base: 1.50;
+$line-height-base: 1.55;
 
 $navbar-default-link-color: black;
 $link-color: purple;
@@ -100,11 +100,15 @@ $breakpoint: $screen-sm-min;
 	@media (min-width: $breakpoint) {
 		@include hairline-border(#content-text, #content-buttons);
 	}
-	
+
 	#content-text {
 		@include make-breakpoint-column(8);
 
 		margin-bottom: $breathing-room;
+		
+		p {
+			margin-right: $breathing-room;
+		}
 
 		#motto {
 			text-align: center;
