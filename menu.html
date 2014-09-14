@@ -1,0 +1,44 @@
+<?php $extraScripts = array("javascripts/handlebars-v1.3.0.js", "javascripts/menu-data.js", "javascripts/menu.js"); ?>
+
+<?php include("includes/_header.html") ?>
+<div id="main-content" class="container">
+	<div class="content-row row">
+		<div id="content-text">
+			<div id="menu-download"><a href="#">Download A Printable Version Of Our Menu</a></div>
+		</div>
+		<div id="content-buttons">
+			<?php include("includes/_buttons.html"); ?>
+		</div>
+	</div>
+</div>
+
+<script id="menu-template" type="text/x-handlebars-template">
+	<table class="menu">
+		{{#pages}}
+			<tr class="menu-page">
+				<td class="menu-page-title" colspan="2">{{title}}</td>
+			</tr>
+			
+			{{#sections}}
+				<tr class="menu-section">
+					<td class="menu-section-title" colspan="2">{{title}}</div>
+				</tr>
+
+				{{#items}}
+					{{#if sectionBreak}}
+						<tr class="menu-item section-break">
+							<td class="menu-item-section-title" colspan="2">{{{sectionBreak}}}</td>
+						</tr>
+					{{else}}
+						<tr class="menu-item {{{stripeRow}}}">
+							<td class="menu-item-title">{{{title}}}</td>
+							<td class="menu-item-price">{{{formatPrice price}}}</td>
+						</tr>
+					{{/if}}
+				{{/items}}
+			{{/sections}}
+		{{/pages}}
+	</table>
+</script>
+
+<?php include("includes/_footer.html") ?>

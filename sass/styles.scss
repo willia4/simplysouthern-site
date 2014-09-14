@@ -92,6 +92,10 @@ $breakpoint: $screen-sm-min;
 			text-transform: uppercase;
 			letter-spacing: 2px;
 		}
+
+		a {
+			color: black;
+		}
 }
 
 #main-content {
@@ -200,9 +204,12 @@ $breakpoint: $screen-sm-min;
 	// background-color: blue;
 	opacity: 0;
 }
+
 body {
 	padding-top: $breathing-room / 2;
 	padding-left: $breathing-room;
 	padding-right: $breathing-room;
 	padding-bottom: $breathing-room;
 }
+
+@import "menu";

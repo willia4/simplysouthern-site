@@ -1,6 +1,6 @@
 default: about
 
-DEPLOYMENT_DIR = /www/simplysoutherndining.com/test
+DEPLOYMENT_DIR = /www/simplysoutherndining.com
 ROOT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 about:

@@ -1,0 +1,65 @@
+#content-text {
+	#menu-download {
+		a {
+			color: black;
+			text-decoration: underline;
+		}
+		font-style: italic;
+		text-align: right;
+		
+		margin-bottom: $breathing-room;
+	}
+
+	table.menu {
+		font-size: 85%;
+		width: 90%;
+		margin-left: $breathing-room;
+
+		td {
+			vertical-align: top;
+		}
+
+		.menu-page-title {
+			font-weight: bold;
+			font-size: 160%;
+
+			// padding-top: $breathing-room;
+
+			border-bottom-style: solid;
+			border-bottom-color: $hairline-color;
+			border-bottom-width: 1px;
+		}
+
+		.menu-section-title {
+			font-weight: bold;
+			font-size: 140%;
+			font-variant: small-caps;
+			text-transform: lowercase;
+
+			padding-top: $breathing-room / 2;
+		}
+
+		.menu-item-section-title {
+			padding-top: $breathing-room;
+
+			font-size: 105%;	
+			font-style: italic;
+			font-weight: bold;
+
+			padding-left: $breathing-room / 2;
+		}
+
+		.menu-item-title {
+			padding-left: $breathing-room;	
+			padding-right: $breathing-room;
+		}
+
+		.menu-item-price {
+			font-size: 85%;
+		}
+
+		.menu-item.stripe {
+			background-color: lighten($hairline-color, 10%);
+		}
+	}
+}
