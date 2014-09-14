@@ -8,12 +8,6 @@ $link-color: purple;
 
 $button-background-color: #f2f2f2;
 
-$grid-columns: 11;
-$button-offset: 1;
-$button-columns: 5; 
-
-// $screen-lg: 1400;
-
 @import "bootstrap-compass";
 @import "bootstrap-variables";
 @import "bootstrap";
@@ -99,9 +93,12 @@ $breakpoint: $screen-sm-min;
 }
 
 #main-content {
-	.content-row {
-		// @include make-row();
-	}	
+	#content-text {
+		@include make-breakpoint-column(8)
+	}
+	#content-buttons {
+		@include make-breakpoint-column(4);
+	}
 
 	a.button {
 		background-color: $button-background-color;
@@ -116,8 +113,6 @@ $breakpoint: $screen-sm-min;
 	}
 
 	.button {
-		@include make-breakpoint-column($button-columns);
-
 		text-align: center;
 		padding: $breathing-room;
 		border-radius: 25px;
@@ -130,61 +125,18 @@ $breakpoint: $screen-sm-min;
 		}
 	}
 
-	.button:not(.first) {
-		@include make-breakpoint-offset($button-offset);
-	}
-	
 	.button-caption {
 		text-decoration: inherit;;
 
-		padding: $breathing-room;
+		padding-top: $breathing-room;
 		font-size: 150%;
 		font-weight: bold;
-		// font-variant: small-caps;
-		// text-transform: lowercase;;
 	}
-
-	
 }
 
 body {
+	padding-top: $breathing-room / 2;
+	padding-left: $breathing-room;
+	padding-right: $breathing-room;
 	padding-bottom: $breathing-room;
 }
-
-// #main-content {
-// 	height: 100%;
-// 	padding-top: 15px;
-
-// 	border-top: 1px;
-// 	border-top-style: solid;
-// 	border-top-color: $hairline-color;
-
-// 	#content-wrapper {
-// 		@include make-row();
-// 	}
-
-// 	#main-content-left {
-// 		@include make-breakpoint-column(4);
-// 	}
-
-// 	@include breakpoint-swap(#slideshow-social, #main-content-social);
-
-// 	@media (min-width: $screen-sm-min) {
-// 		@include hairline-border(#slideshow, #main-content-left);
-// 	}
-
-// 	#slideshow {
-// 		@include make-breakpoint-column(8);
-
-// 		img {
-// 			max-width: 100%;
-// 			max-height: 100%;
-// 			width: 100%;
-// 		}
-// 	}
-
-// 	.social {
-// 		text-align: center;
-// 		margin-top: $breathing-room;
-// 	}
-// }
