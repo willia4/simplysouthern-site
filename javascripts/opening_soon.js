@@ -7,5 +7,4 @@ $(document).ready(function () {
 		}, 2000);
 
 	}, 800);
-	// $(".carousel").carousel();
 });
