@@ -95,11 +95,33 @@ $breakpoint: $screen-sm-min;
 }
 
 #main-content {
+	margin-top: $breathing-room;
+
+	@media (min-width: $breakpoint) {
+		@include hairline-border(#content-text, #content-buttons);
+	}
+	
 	#content-text {
-		@include make-breakpoint-column(8)
+		@include make-breakpoint-column(8);
+
+		margin-bottom: $breathing-room;
+
+		#motto {
+			text-align: center;
+			margin-top: $breathing-room;
+			font-weight: bold;
+			font-size: 105%;
+		}
 	}
 	#content-buttons {
 		@include make-breakpoint-column(4);
+	}
+
+	div.button {
+		background-color: $button-background-color;
+
+		display: block;
+		color: black;
 	}
 
 	a.button {
@@ -116,10 +138,8 @@ $breakpoint: $screen-sm-min;
 
 	.button {
 		text-align: center;
-		padding: $breathing-room;
+		padding: $breathing-room / 2;
 		border-radius: 25px;
-
-		margin-top: $breathing-room;
 
 		img {
 			border-radius: 15px;
@@ -127,11 +147,15 @@ $breakpoint: $screen-sm-min;
 		}
 	}
 
+	.button:not(.first) {
+		margin-top: $breathing-room;
+	}
+
 	.button-caption {
 		text-decoration: inherit;;
 
-		padding-top: $breathing-room;
-		font-size: 150%;
+		padding-top: $breathing-room / 2;
+		font-size: 130%;
 		font-weight: bold;
 	}
 }

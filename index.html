@@ -4,10 +4,13 @@
 <div id="main-content" class="container">
 	<div class="content-row row">
 		<div id="content-text">
-			<p>Simply Southern Dining is a new down-home resturant in Florence, SC. 
+			<p>Simply Southern Dining is a new down-home resturant in Florence, SC. We feature hearty breakfasts and delicious lunches along side our freshly-made bagels and biscuits. 
+			<p>At Simply Southern Dining, we pride ourselves on offering the finest ingredients and doing our best to make everything we serve from scratch
+			
+			<div id="motto">Make It Fresh&nbsp;&middot;&nbsp;Make It Simply&nbsp;&middot;&nbsp;Make It Simply Southern</div>
 		</div>
 		<div id="content-buttons">
-			<a id="button-location" class="button" href="https://www.google.com/maps/place/2525+S+Cashua+Dr,+Florence,+SC+29501/@34.1671708,-79.8262163,17z/data=!4m2!3m1!1s0x885561568d6557d5:0x12eb25254d8699ab">
+			<a id="button-location" class="button first" href="<?echo BuildMapURL(); ?>">
 				<img class="button-image" src="<? echo BuildMapImageSrc(); ?>" />
 				<div class="button-caption">2525 S. Cashua Dr.</div>
 			</a>
@@ -26,10 +29,10 @@
 				<div class="button-caption">Menu</div>
 			</a>
 
-			<a id="button-hours" class="button" href="#">
-				<img class="button-image" src="images/hours.png" alt="Monday - Saturday, 6:00am - 2:00pm"/>
+			<div id="button-hours" class="button">
+				<img class="button-image" src="images/hours.png" alt="Monday - Saturday, 6:30am - 2:00pm"/>
 				<div class="button-caption">Hours</div>
-			</a>
+			</div>
 
 			<a id="button-contact" class="button" href="tel:1-843-799-5253">
 				<img class="button-image" src="images/contact.png" alt="1-843-799-5253"/>
@@ -53,26 +56,46 @@
 <?php include("includes/_footer.html") ?>
 
 <?php 
+function SimplySouthernAddress() {
+	return "2525 S. Cashua Dr. Florence, SC";
+}
+
+function BrowserIsApple() {
+	$userAgent = $_SERVER['HTTP_USER_AGENT'];
+	$apples = array("iPhone", "iPod", "iPad" /*, "Macintosh" */);
+
+	foreach($apples as $apple) {
+		if(strstr($userAgent, $apple)) {
+			return true;
+		}
+	}
+	return false;
+}
+
 function BuildMapImageSrc() {
+	global $address;
+
 	$apiKey = "AIzaSyD32qe9eejR3tL2FBof88c1flTASulWZsU";
 
 	$params = array(
 			  "key" => $apiKey
-			, "center" => "2525 S. Cashua Dr. Florence, SC"
+			, "center" => SimplySouthernAddress()
 			, "zoom" => "17"
 			, "scale" => "2"
 			, "maptype" => "roadmap"
 			, "size" => "600x300" //scale: 2 means this will actually be 1200x600. 2:1 aspect ratio
-			, "markers" => "color:white|2525 S. Cashua Dr. Florence, SC"
+			, "markers" => "color:white|" . SimplySouthernAddress()
 		);
 
 	$url = "http://maps.googleapis.com/maps/api/staticmap?";
 	
-
 	return $url . http_build_query($params);  
-
-	return "http://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
-&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
-&markers=color:red%7Clabel:C%7C40.718217,-73.998284";
 } 
+
+function BuildMapURL() {
+	$google = "https://www.google.com/maps/place/2525+S+Cashua+Dr,+Florence,+SC+29501/@34.1671708,-79.8262163,17z/data=!4m2!3m1!1s0x885561568d6557d5:0x12eb25254d8699ab";
+	$apple = "http://maps.apple.com/?q=" . urlencode(SimplySouthernAddress());
+
+	return BrowserIsApple() ? $apple : $google;
+}
 ?>
