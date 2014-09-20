@@ -19,6 +19,7 @@ watch:
 deploy: 
 	scp .htaccess willia4@willia4.me:$(DEPLOYMENT_DIR)/
 	scp *.html willia4@willia4.me:$(DEPLOYMENT_DIR)/
+	scp *.pdf willia4@willia4.me:$(DEPLOYMENT_DIR)/
 	scp -r includes willia4@willia4.me:$(DEPLOYMENT_DIR)/
 	scp -r stylesheets willia4@willia4.me:$(DEPLOYMENT_DIR)/
 	scp -r fonts willia4@willia4.me:$(DEPLOYMENT_DIR)/
