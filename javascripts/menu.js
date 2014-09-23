@@ -28,35 +28,36 @@ $(document).ready(function () {
 	})
 
 	Handlebars.registerHelper('formatPrice', function (price) {
-		return "Coming Soon!";
+		// return "Coming Soon!";
 
-		// if (price === null || typeof price === "undefined") {
-		// 	return "";
-		// }
-		// else if (typeof price === "string") {
-		// 	return price;
-		// }
-		// else if (typeof price === "number") {
-		// 	//Only print the decimals if we have to.
-		// 	// if (price === Math.round(price)) {
-		// 	// 	return price;
-		// 	// }
-		// 	// else {
-		// 	// 	return price.toFixed(2);
-		// 	// }
+		if (price === null || typeof price === "undefined") {
+			return "";
+		}
+		else if (typeof price === "string") {
+			return price;
+		}
+		else if (typeof price === "number") {
+			//Only print the decimals if we have to.
+			// if (price === Math.round(price)) {
+			// 	return price;
+			// }
+			// else {
+			// 	return price.toFixed(2);
+			// }
 
-		// 	//always print the decimals
-		// 	return price.toFixed(2);
-		// }
-		// else {
-		// 	return price;
-		// }
+			//always print the decimals
+			return price.toFixed(2);
+		}
+		else {
+			return price;
+		}
 	});
 
 	$("#content-text").append(template(menu));
 
-	$("#menu-download a").click(function(event) {
-		event.preventDefault();
-		alert("Coming Soon!");
-	})
+	//This isn't needed if there's actually a menu to download
+	// $("#menu-download a").click(function(event) {
+	// 	event.preventDefault();
+	// 	alert("Coming Soon!");
+	// })
 });
