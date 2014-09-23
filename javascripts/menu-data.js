@@ -79,7 +79,7 @@
 	breakfast.sides = {
 		title: "Sides",
 		items: [
-			{title: "Egg", price: 0.89},
+			{title: "Egg", price: 0.85},
 			{ title: "Grits", price: 1.50} /*,
 					extras: [
 						{description: "Add cheese", price: 0.55}
@@ -104,20 +104,20 @@
 	breakfast.beverages = {
 		title: "Beverages",
 		items: [
-			{ title: "Coffee (free refills)", price: 1.69},
-			{ title: "Coffee-To-Go 12oz", price: 1.15},
-			{ title: "Coffee-To-Go 16oz", price: 1.35},
-			{ title: "Hot tea", price: 1.50},
-			{ title: "Hot chocolate", price: 1.50},
-			{ title: "Juice", price: 1.50},
+			{ title: "Coffee (free refills)", price: 1.99},
+			{ title: "Coffee-To-Go 12oz", price: 1.49},
+			{ title: "Coffee-To-Go 16oz", price: 1.69},
+			{ title: "Hot tea", price: 1.49},
+			{ title: "Hot chocolate", price: 1.49},
+			{ title: "Juice", price: 1.49},
 			{ title: "Milk", extras: [
-				{description: "Small", price: 1.00},
+				{description: "Small 8oz", price: 0.99},
 				// {description: "Medium", price: 1.29},
-				{description: "Large", price: 1.49}
+				{description: "Large 16oz", price: 1.99}
 			]},
 			{ title: "Sweet Tea (free refills)", price: 1.69},
-			{ title: "Fountain drinks", price: 1.69},
-			{ title: "Bottled water", price: 1.50}
+			{ title: "Fountain drinks", price: 1.89},
+			{ title: "Bottled water", price: 1.49}
 		]
 	};
 
@@ -136,7 +136,7 @@
 
 	lunch.hotDogs = {
 		title: "Hot Dogs",
-		subtitle: "100% beef franks served on a grilled bun <br/><br/>" + 
+		subtitle: "100% beef franks<br/><br/>" + 
 				  "<b>Add house cut fries for 2.49</b>",
 		items: [
 			{title: "Simply plain dog", description: "Classic grilled hot dog", price: 2.99},
@@ -173,12 +173,12 @@
 		
 	lunch.burgers = {
 		title: "Gourmet Burgers",
-		subtitle: "Premium grilled all-beef patties served with lettuce, tomato, pickle, and onion on a toasted bun <br/><br/>" + 
+		subtitle: "Premium grilled all-beef patties with lettuce, tomato, pickle, and onion on a toasted bun <br/><br/> Can be customized with ketchup, mustard, and mayonaise <br/><br/>" + 
 				  "<b>Add house cut fries for 2.49</b>",
 		items: [
 			{title: "Second Loop Classic Burger" /*, description: "With our without melted American cheese."*/, price: 4.99,
 				extras: [
-					{description: "Add cheese", price: .90}
+					{description: "Add cheese", price: .75}
 					// {description: "Basket", price: 8},
 					// {description: "Burger only", price: 6}
 				]
@@ -215,7 +215,7 @@
 			},
 			{title: "&frac14; Pound Classic Burger", price: 3.29,
 				extras: [
-					{description: "Add cheese", price: 0.90}
+					{description: "Add cheese", price: 0.75}
 				]
 			}
 		]
@@ -226,12 +226,12 @@
 		subtitle: "Start with any of our burgers above and make it your own",
 		items: [
 			// {title: "Extra patty", price: 3.00},
-			{title: "Cheese (Provolone, Swiss, Mozarella, Cheddar, Pepper Jack, American)", price: 0.90},
+			{title: "Cheese (Provolone, Swiss, Mozarella, Cheddar, Pepper Jack, American)", price: 0.75},
 			{title: "Pimento cheese", price: 1.30},
 			{title: "Goat cheese spread", price: 1.30},
 			{title: "Saut&eacute;ed or grilled mushrooms", price: 0.70},
 			{title: "Grilled onions", price: 0.65},
-			{title: "Grilled pineapple", price: 0.30},
+			{title: "Grilled pineapple", price: 0.60},
 			{title: "Grilled peppers", price: 0.85},
 			{title: "Cole slaw", price: 0.60},
 			
@@ -245,7 +245,7 @@
 
 	lunch.sandwiches = {
 		title: "Sandwiches",
-		subtitle: "Sandwiches can be customized with lettuce, tomatoes, pickels, onions, ketchup, and mayonaise<br/><br/>" + 
+		subtitle: "Sandwiches can be customized with lettuce, tomatoes, pickels, onions, ketchup, mustard, and mayonaise<br/><br/>" + 
 				  "Served on your choice of grilled bread or toasted bagel<br/><br/>" +
 				  "<b>Add house cut fries for 2.49</b>",
 		items : [
@@ -253,9 +253,9 @@
 			{title: "Celebration Grilled Chicken Sandwich", description: "A tender &amp; juicy grilled chicken breast topped with swiss cheese, bacon, lettuce, and tomato", price: 4.50},
 			// {title: "Grilled Fresh Cheesesteak", description: "Ribeye steak, sliced thin and grilled, with grilled onions and peppers &mdash; topped with melted provolone", price: 4.99},
 			{title: "Crazy good pulled pork sandwich", description: "Tender pulled pork with our very own secret BBQ sauce, topped with our homemade coleslaw", price: 5.99},
-			{title: "Turkey So Sweet", description: "Sliced turkey, cheese of your choice, grilled onion, grilled peppers, avacado, and our homemade honey mustard", price: 4.50},
+			{title: "Turkey So Sweet", description: "Sliced turkey, cheese of your choice, grilled onion, grilled peppers, avacado, and our homemade honey mustard", price: 4.99},
 			{title: "Simply Southern \"BLTA\" &mdash; Bacon, Lettuce, Tomato, &amp; Avacado", description: "Toasted bread with lettuce, thick-sliced tomato, bacon, and avacado", price: 4.50},
-			{title: "Southern Classic Fried Bologna and Cheese", description: "Thick-slicked fried bologna covered in chedder cheese", price: 3.99},
+			{title: "Southern Classic Fried Bologna and Cheese", description: "Thick-slicked fried bologna covered in cheddar cheese", price: 3.99},
 			{title: "Deluxe Grilled Cheese", description: "Cheddar, swiss, and provolone cheese served between two pieces of buttered and grilled bread", price: 3.99},
 			{sectionBreak: "Great on bagels!"},
 			{title: "Veggie Deluxe", description: "Choice of cream cheese, onion, tomato and &mdash; served on your choice of bagel", price: 3.99},
@@ -268,7 +268,7 @@
 		title: "Wings",
 		subtitle: "<b>Add house cut fries for 2.49</b>",
 		items: [
-			{title: "Wings", price: "1.19ea", extras: [
+			{title: "Wings - 5pc", price: "5.99", extras: [
 				{description: "Fried"},
 				{description: "Teriyaki"},
 				{description: "BBQ"},
