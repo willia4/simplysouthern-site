@@ -140,8 +140,8 @@
 				  "<b>Add house cut fries for 2.49</b>",
 		items: [
 			{title: "Simply plain dog", description: "Classic grilled hot dog", price: 2.99},
-			{title: "Palmetto Chilli dog", description: "Grilled hot dog topped with our homemade chilli", price: 3.99},
-			{title: "Kicking Good Slaw dog", description: "Grilled hot dog topped with our homemade chilli and cole slaw", price: 3.99}
+			{title: "Palmetto Chili dog", description: "Grilled hot dog topped with our homemade chili", price: 3.99},
+			{title: "Kicking Good Slaw dog", description: "Grilled hot dog topped with our homemade chili and cole slaw", price: 3.99}
 		]
 	};
 	
@@ -193,9 +193,9 @@
 					extras: [
 						// {description: "Basket", price: 8},
 						// {description: "Burger only", price: 6},
-						// {description: "Add avacado", price: 1}
+						// {description: "Add avocado", price: 1}
 					]},
-			{title: "Swamp Fox Chilli Cheese Burger", description: "Topped with homemade chilli, cheddar cheese, and sliced onion", price: 5.99,
+			{title: "Swamp Fox Chili Cheese Burger", description: "Topped with homemade chili, cheddar cheese, and sliced onion", price: 5.99,
 				extras: [
 					// {description: "Basket", price: 8},
 					// {description: "Burger only", price: 6}
@@ -226,7 +226,7 @@
 		subtitle: "Start with any of our burgers above and make it your own",
 		items: [
 			// {title: "Extra patty", price: 3.00},
-			{title: "Cheese (Provolone, Swiss, Mozarella, Cheddar, Pepper Jack, American)", price: 0.75},
+			{title: "Cheese (Provolone, Swiss, Mozzarella, Cheddar, Pepper Jack, American)", price: 0.75},
 			{title: "Pimento cheese", price: 1.30},
 			{title: "Goat cheese spread", price: 1.30},
 			{title: "Saut&eacute;ed or grilled mushrooms", price: 0.70},
@@ -235,10 +235,10 @@
 			{title: "Grilled peppers", price: 0.85},
 			{title: "Cole slaw", price: 0.60},
 			
-			{title: "Avacado", price: 0.70},
+			{title: "Avocado", price: 0.70},
 			{title: "Bacon - 2 strips", price: 2.30},
 			{title: "Fried egg", price: 0.85},
-			{title: "Chilli", price: 0.85},
+			{title: "Chili", price: 0.85},
 			{title: "Homemade onion ring", price: 0.75}
 		]
 	};
@@ -253,14 +253,14 @@
 			{title: "Celebration Grilled Chicken Sandwich", description: "A tender &amp; juicy grilled chicken breast topped with swiss cheese, bacon, lettuce, and tomato", price: 4.50},
 			// {title: "Grilled Fresh Cheesesteak", description: "Ribeye steak, sliced thin and grilled, with grilled onions and peppers &mdash; topped with melted provolone", price: 4.99},
 			{title: "Crazy good pulled pork sandwich", description: "Tender pulled pork with our very own secret BBQ sauce, topped with our homemade coleslaw", price: 5.99},
-			{title: "Turkey So Sweet", description: "Sliced turkey, cheese of your choice, grilled onion, grilled peppers, avacado, and our homemade honey mustard", price: 4.99},
-			{title: "Simply Southern \"BLTA\" &mdash; Bacon, Lettuce, Tomato, &amp; Avacado", description: "Toasted bread with lettuce, thick-sliced tomato, bacon, and avacado", price: 4.50},
-			{title: "Southern Classic Fried Bologna and Cheese", description: "Thick-slicked fried bologna covered in cheddar cheese", price: 3.99},
+			{title: "Turkey So Sweet", description: "Sliced turkey, cheese of your choice, grilled onion, grilled peppers, avocado, and our homemade honey mustard", price: 4.99},
+			{title: "Simply Southern \"BLTA\" &mdash; Bacon, Lettuce, Tomato, &amp; Avocado", description: "Toasted bread with lettuce, thick-sliced tomato, bacon, and avocado", price: 4.50},
+			{title: "Southern Classic Fried Bologna and Cheese", description: "Thick-sliced fried bologna covered in cheddar cheese", price: 3.99},
 			{title: "Deluxe Grilled Cheese", description: "Cheddar, swiss, and provolone cheese served between two pieces of buttered and grilled bread", price: 3.99},
 			{sectionBreak: "Great on bagels!"},
 			{title: "Veggie Deluxe", description: "Choice of cream cheese, onion, tomato and &mdash; served on your choice of bagel", price: 3.99},
 			{title: "New Yorker", description: "Lox, cream cheese, onion, tomato, and capers &mdash; served on your choice of bagel", price: 4.99},
-			{title: "Lox and cream cheese", description: "Lox and cream cheese served &mdash; served on your choice of bagel", price: 3.99}
+			{title: "Lox and cream cheese", description: "Lox and cream cheese &mdash; served on your choice of bagel", price: 3.99}
 		]
 	};
 
@@ -298,8 +298,8 @@
 			{title: "House cut fries", price: 2.99},
 			{title: "Cole slaw", price: 2.50},
 			{title: "Mashed potatoes", price: 2.75},
-			{title: "Chilli Fries", price: 3.75}, 
-			{title: "Chilli Cheese Fries", price: 4.50},
+			{title: "Chili Fries", price: 3.75}, 
+			{title: "Chili Cheese Fries", price: 4.50},
 			{title: "Sweet Potato Fries", price: 3.50},
 			{title: "Homemade Onion Rings", price: 3.25},
 			{title: "Grilled squash and onions", price: 3.00},
