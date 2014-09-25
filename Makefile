@@ -18,14 +18,14 @@ watch:
 
 deploy: 
 	ssh willia4@willia4.me 'rm -rf $(DEPLOYMENT_DIR)/*.pdf'
-	# ssh willia4@willia4.me 'rm -rf $(DEPLOYMENT_DIR)/*.html'
+	ssh willia4@willia4.me 'rm -rf $(DEPLOYMENT_DIR)/*.html'
 	ssh willia4@willia4.me 'rm -rf $(DEPLOYMENT_DIR)/images'
 
-	# scp .htaccess willia4@willia4.me:$(DEPLOYMENT_DIR)/
-	# scp *.html willia4@willia4.me:$(DEPLOYMENT_DIR)/
-	# scp *.pdf willia4@willia4.me:$(DEPLOYMENT_DIR)/
-	# scp -r includes willia4@willia4.me:$(DEPLOYMENT_DIR)/
-	# scp -r stylesheets willia4@willia4.me:$(DEPLOYMENT_DIR)/
-	# scp -r fonts willia4@willia4.me:$(DEPLOYMENT_DIR)/
-	# scp -r javascripts willia4@willia4.me:$(DEPLOYMENT_DIR)/
+	scp .htaccess willia4@willia4.me:$(DEPLOYMENT_DIR)/
+	scp *.html willia4@willia4.me:$(DEPLOYMENT_DIR)/
+	scp *.pdf willia4@willia4.me:$(DEPLOYMENT_DIR)/
+	scp -r includes willia4@willia4.me:$(DEPLOYMENT_DIR)/
+	scp -r stylesheets willia4@willia4.me:$(DEPLOYMENT_DIR)/
+	scp -r fonts willia4@willia4.me:$(DEPLOYMENT_DIR)/
+	scp -r javascripts willia4@willia4.me:$(DEPLOYMENT_DIR)/
 	scp -r images willia4@willia4.me:$(DEPLOYMENT_DIR)/
