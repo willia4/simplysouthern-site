@@ -125,7 +125,7 @@
 	
 	lunch.salads = {
 		title: "Salads",
-		subtitle: "All served on a bed of mixed greens and your choice of thousand island, ranch, french, bleu cheese, or honey mustard dressings",
+		subtitle: "All served on a bed of mixed greens and your choice of thousand island, ranch, bleu cheese, or honey mustard dressings",
 		items: [
 			{ title: "House Salad", description: "Cucumbers, tomatoes, cheddar cheese, diced egg, and croutons", price: 6.99 },
 			{ title: "Chef Salad", description: "Cucumbers, tomatoes, ham, turkey, bacon, cheddar cheese, and croutons", price: 7.99 },
@@ -252,7 +252,7 @@
 			{title: "Cashua Fried Chicken Sandwich", description: "A lightly hand-breaded chicken breast topped with bacon and our homemade onion ring", price: 4.50},
 			{title: "Celebration Grilled Chicken Sandwich", description: "A tender &amp; juicy grilled chicken breast topped with swiss cheese, bacon, lettuce, and tomato", price: 4.50},
 			// {title: "Grilled Fresh Cheesesteak", description: "Ribeye steak, sliced thin and grilled, with grilled onions and peppers &mdash; topped with melted provolone", price: 4.99},
-			{title: "Crazy good pulled pork sandwich", description: "Tender pulled pork with our very own secret BBQ sauce, topped with our homemade coleslaw", price: 5.99},
+			// {title: "Crazy good pulled pork sandwich", description: "Tender pulled pork with our very own secret BBQ sauce, topped with our homemade coleslaw", price: 5.99},
 			{title: "Turkey So Sweet", description: "Sliced turkey, cheese of your choice, grilled onion, grilled peppers, avocado, and our homemade honey mustard", price: 4.99},
 			{title: "Simply Southern \"BLTA\" &mdash; Bacon, Lettuce, Tomato, &amp; Avocado", description: "Toasted bread with lettuce, thick-sliced tomato, bacon, and avocado", price: 4.50},
 			{title: "Southern Classic Fried Bologna and Cheese", description: "Thick-sliced fried bologna covered in cheddar cheese", price: 3.99},
@@ -302,9 +302,9 @@
 			{title: "Chili Cheese Fries", price: 4.50},
 			{title: "Sweet Potato Fries", price: 3.50},
 			{title: "Homemade Onion Rings", price: 3.25},
-			{title: "Grilled squash and onions", price: 3.00},
-			{title: "Plain Baked Potato", price: 3.00},
-			{title: "Loaded Baked Potato", price: 3.99, description: "Bacon, cheese, butter, and sour cream"}
+			{title: "Grilled squash and onions", price: 3.00}
+			// {title: "Plain Baked Potato", price: 3.00},
+			// {title: "Loaded Baked Potato", price: 3.99, description: "Bacon, cheese, butter, and sour cream"}
 		]
 	};
 

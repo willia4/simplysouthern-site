@@ -12,7 +12,7 @@ $(document).ready(function () {
 		},
 		{
 			title: "Lunch",
-			sections: [lunch.sandwiches, lunch.salads, lunch.burgers, lunch.burgers_byob, lunch.chickenWings, lunch.hotDogs, lunch.sides, lunch.kids, lunch.beverages]
+			sections: [lunch.sandwiches, lunch.salads, lunch.burgers, lunch.burgers_byob, /*lunch.chickenWings,*/ lunch.hotDogs, lunch.sides, lunch.kids, lunch.beverages]
 		}
 	];
 
