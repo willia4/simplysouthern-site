@@ -71,8 +71,8 @@
 			{title: "1 Egg", price: 2.99},
 			{title: "1 Egg with Bacon, Sausage, Ham, or Fried Bologna", price: 3.99},
 			{title: "2 Eggs", price: 3.89},
-			{title: "2 Eggs with Bacon, Sausage, Ham, or Fried Bologna", price: 4.89},
-			{title: "2 made-from-scratch biscuits smothered in rich milk gravy", price: 3.60},
+			{title: "2 Eggs with Bacon, Sausage, Ham, or Fried Bologna", price: 4.89}
+			//, {title: "2 made-from-scratch biscuits smothered in rich milk gravy", price: 3.60}
 		]
 	}
 
