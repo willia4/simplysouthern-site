@@ -249,8 +249,8 @@
 				  "Served on your choice of grilled bread or toasted bagel<br/><br/>" +
 				  "<b>Add house cut fries for 2.49</b>",
 		items : [
-			{title: "Cashua Fried Chicken Sandwich", description: "A lightly hand-breaded chicken breast topped with bacon and our homemade onion ring", price: 4.50},
-			{title: "Celebration Grilled Chicken Sandwich", description: "A tender &amp; juicy grilled chicken breast topped with swiss cheese, bacon, lettuce, and tomato", price: 4.50},
+			{title: "Cashua Fried Chicken Sandwich", description: "A lightly hand-breaded chicken breast topped with bacon and our homemade onion ring", price: 5.99},
+			{title: "Celebration Grilled Chicken Sandwich", description: "A tender &amp; juicy grilled chicken breast topped with swiss cheese, bacon, lettuce, and tomato", price: 5.99},
 			// {title: "Grilled Fresh Cheesesteak", description: "Ribeye steak, sliced thin and grilled, with grilled onions and peppers &mdash; topped with melted provolone", price: 4.99},
 			// {title: "Crazy good pulled pork sandwich", description: "Tender pulled pork with our very own secret BBQ sauce, topped with our homemade coleslaw", price: 5.99},
 			{title: "Turkey So Sweet", description: "Sliced turkey, cheese of your choice, grilled onion, grilled peppers, avocado, and our homemade honey mustard", price: 4.99},
