@@ -28,15 +28,16 @@
 			{title: "Everything", price: 1.29},
 			{sectionBreak: "Speciality Bagels"},
 			{title: "Cinnamon Dipped", price: 1.69},
-			{title: "Cinnamon Raisin", price: 1.69},
-			{title: "Blueberry", price: 1.69},
+			// {title: "Cinnamon Raisin", price: 1.69},
+			// {title: "Blueberry", price: 1.69},
 			{title: "Cheddar", price: 1.69},
 			{sectionBreak: "Cream Cheese"},
 			{title: "Plain", price: 1.20},
 			{title: "Veggie", price: 1.35},
+			{title: "Scallion", price: 1.35},
 			{title: "Strawberry", price: 1.35},
-			{title: "Maple Walnut", price: 1.35},
-			{title: "Fat Free", price: 1.35}
+			{title: "Maple Walnut", price: 1.35}
+			//, {title: "Fat Free", price: 1.35}
 		]
 	};
 
@@ -57,10 +58,11 @@
 		items: [
 			{title: "Egg Sandwich", price: 1.69},
 			{title: "Egg and Cheese Sandwich", price: 2.59},
-			{title: "Bacon, Egg, and Cheese Sandwich", price: 4.09},
+			// {title: "Bacon, Egg, and Cheese Sandwich", price: 4.09},
 			{title: "Ham Sandwich", price: 2.29},
 			{title: "Fried Bologna Sandwich", price: 2.29},
-			{title: "Ham, Fried Bologna or Sausage with Egg and Cheese Sandwich", price: 4.09}
+			{title: "Ham, Fried Bologna or Sausage with Egg Sandwich", price: 3.09},
+			{title: "Ham, Fried Bologna or Sausage with Egg and Cheese Sandwich", price: 3.89}
 		]
 	};
 
@@ -85,7 +87,7 @@
 						{description: "Add cheese", price: 0.55}
 					]
 			}*/,
-			{ title: "Chopped Potatoes &amp; Onions", price: 3.99},
+			{ title: "Chopped Potatoes &amp; Onions", price: 3.50},
 			{ title: "Biscuit", price: 0.80},
 			{ title: "2 slices of Toast", price: 0.80 },
 			{ title: "2 pieces of bacon, sausage, ham, or fried bologna", price: 2.30}
@@ -116,8 +118,8 @@
 				{description: "Large 16oz", price: 1.99}
 			]},
 			{ title: "Sweet Tea (free refills)", price: 1.69},
-			{ title: "Fountain drinks", price: 1.89},
-			{ title: "Bottled water", price: 1.49}
+			{ title: "Fountain drinks", price: 1.99},
+			{ title: "Bottled water", price: 1.29}
 		]
 	};
 
@@ -141,7 +143,7 @@
 		items: [
 			{title: "Simply plain dog", description: "Classic grilled hot dog", price: 2.99},
 			{title: "Palmetto Chili dog", description: "Grilled hot dog topped with our homemade chili", price: 3.99},
-			{title: "Kicking Good Slaw dog", description: "Grilled hot dog topped with our homemade chili and cole slaw", price: 3.99}
+			{title: "Kicking Good Slaw dog", description: "Grilled hot dog topped with our homemade chili and cole slaw", price: 4.59}
 		]
 	};
 	
@@ -227,8 +229,8 @@
 		items: [
 			// {title: "Extra patty", price: 3.00},
 			{title: "Cheese (Provolone, Swiss, Mozzarella, Cheddar, Pepper Jack, American)", price: 0.75},
-			{title: "Pimento cheese", price: 1.30},
-			{title: "Goat cheese spread", price: 1.30},
+			{title: "Pimento cheese", price: 0.85},
+			// {title: "Goat cheese spread", price: 1.30},
 			{title: "Saut&eacute;ed or grilled mushrooms", price: 0.70},
 			{title: "Grilled onions", price: 0.65},
 			{title: "Grilled pineapple", price: 0.60},
@@ -239,7 +241,7 @@
 			{title: "Bacon - 2 strips", price: 2.30},
 			{title: "Fried egg", price: 0.85},
 			{title: "Chili", price: 0.85},
-			{title: "Homemade onion ring", price: 0.75}
+			{title: "Homemade onion ring", price: 0.45}
 		]
 	};
 
